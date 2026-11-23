@@ -9,8 +9,9 @@ body {
   justify-content: center;
   align-items: center;
   font-family: Arial, sans-serif;
-  background: #eeeeee;
+  background: #2b2b2b;
   color: #222222;
+  transition: 0.5s;
 }
 
 .container {
@@ -23,16 +24,13 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
 }
 
-h1 {
-  margin-top: 0;
-}
-
 .lampada {
   margin: 25px auto 10px;
   font-size: 90px;
   width: 150px;
   padding: 15px;
   border-radius: 50%;
+  transition: 0.5s;
 }
 
 .apagada {
@@ -41,20 +39,31 @@ h1 {
 }
 
 .acendida {
-  background: #fff2a8;
-  box-shadow: 0 0 35px #ffd700;
+  background: #ffd166;
+  box-shadow: 0 0 35px #ffb703;
 }
 
 button {
-  padding: 12px 24px;
-  border: 0;
-  border-radius: 7px;
-  background: #2563eb;
-  color: white;
-  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
 }
 
 button:hover {
   background: #1d4ed8;
+  color: white;
+}
+
+/* Fundo iluminado da galeria */
+
+body.iluminado {
+  background: linear-gradient(
+    135deg,
+    #ff595e,
+    #ffca3a,
+    #8ac926,
+    #1982c4,
+    #6a4c93
+  );
 }
