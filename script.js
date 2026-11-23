@@ -5,17 +5,28 @@ const mensagem = document.getElementById("mensagem");
 let luzAcesa = false;
 
 botao.addEventListener("click", function () {
+
   if (luzAcesa) {
     lampada.classList.remove("acendida");
     lampada.classList.add("apagada");
-    mensagem.textContent = "A luz está apagada.";
-    botao.textContent = "Acender luz";
+
+    document.body.classList.remove("iluminado");
+
+    mensagem.textContent = "A galeria está com as luzes apagadas.";
+    botao.textContent = "Iluminar galeria";
+
     luzAcesa = false;
+
   } else {
+
     lampada.classList.remove("apagada");
     lampada.classList.add("acendida");
-    mensagem.textContent = "A luz está acesa!";
-    botao.textContent = "Apagar luz";
+
+    document.body.classList.add("iluminado");
+
+    mensagem.textContent = "A exposição está iluminada!";
+    botao.textContent = "Apagar iluminação";
+
     luzAcesa = true;
   }
 });
